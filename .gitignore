@@ -5,6 +5,8 @@
 /dist/
 /build/
 /web-build/
+/android/
+/ios/
 
 # Log files
 npm-debug.log*

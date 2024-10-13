@@ -1,7 +1,6 @@
-import React = require('react');
+import * as React from 'react';
 import { View, Text, ImageBackground, Image, TextInput, Pressable } from 'react-native'
 import styles from '@/styles/GlobalSheet';
-import { SafeAreaView } from 'react-native-safe-area-context';
 
 const BgImage = '../assets/Background-img/Stardust-bg.png';
 const LogoImage = '../assets/images/Stardust_logo.png'

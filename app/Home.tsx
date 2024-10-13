@@ -1,9 +1,6 @@
-// @ts-ignore
-import React = require('react');
+import * as React from 'react';
 import { Text, View, ScrollView, Pressable, Image, ImageBackground } from "react-native";
-import { Login } from "./Login";
 import { Footer } from "@/components/Footer";
-import styles from '@/styles/GlobalSheet';
 import styles_home from "@/styles/HomeSheet";
 import {FormattedDate} from "@/components/FormattedDate";
 import {IntervalUpdater} from "@/components/IntervalUpdater";

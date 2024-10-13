@@ -62,8 +62,8 @@ let styles_home = StyleSheet.create({
     },
 
     Scrollable: {
-        
-        flexGrow: 1,
+        flex:1,
+
 
     },
     Page: {

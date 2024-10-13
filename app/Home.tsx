@@ -57,7 +57,7 @@ export const Home = () => {
         <ImageBackground source={require("../assets/Background-img/Home_Bg.png")} style={styles.Background}>
             <SafeAreaProvider>
             <SafeAreaView  style={styles_home.Page}>
-            <ScrollView style ={styles_home.Scrollable}>
+            <ScrollView style ={styles_home.Scrollable} showsVerticalScrollIndicator={true} persistentScrollbar={true}>
                 <View style={styles_home.DateBellContainer}>
                     <IntervalUpdater interval={1000} children={<FormattedDate/>}/>
                     <Pressable>
@@ -68,11 +68,14 @@ export const Home = () => {
                 <BounceableImage source={require(LogoImage)} max_scale={1.2} duration={275} style={styles_home.Logo}/>
                 <Text style={styles_home.HeadingHome}>Welcome back, {user}!</Text>
                 <IntervalUpdater interval={500} children={<BottleFinder/>}/>
-                <HorizontalScrollable
+                <View>
+                    <HorizontalScrollable
                     elemNum={4}
                     style={styles_home.MedsReminders}
                     styleContainer={styles_home.MedsContain}
                     children={medEntries}/>
+                </View>
+
                 <HorizontalScrollable
                     elemNum={3}
                     style={styles_home.SocialReminders}

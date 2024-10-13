@@ -31,7 +31,7 @@ export const Login = () => {
     const [passwordEntry, onChangePassword] = React.useState('');
 
     return (
-        <View style={styles.container}>
+        <View style={styles.Container}>
             <ImageBackground
             source={require(BgImage)}
             style={styles.backgroundImage}>

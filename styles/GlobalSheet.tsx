@@ -10,6 +10,9 @@ let styles = StyleSheet.create({
   Background: {
     height: "100%",
   },
+  Container: {
+    flex: 1
+  },
   BackArrow:{
     width: 30,
     height: 30,

@@ -1,5 +1,6 @@
 import { Text, View, ScrollView, Pressable, Image, ImageBackground } from "react-native";
 import { Login } from "./Login";
+import { Footer } from "@/components/Footer";
 import styles from '@/styles/GlobalSheet';
 import styles_home from "@/styles/HomeSheet";
 
@@ -36,9 +37,7 @@ export default function Home() {
             </View>
 
 
-            <View style={styles.Footer}>
-
-            </View>
+            <Footer></Footer>
         </ImageBackground>
         
     </View>

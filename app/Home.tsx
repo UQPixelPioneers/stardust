@@ -1,18 +1,46 @@
-import { Text, View, ScrollView } from "react-native";
+import { Text, View, ScrollView, Pressable, Image, ImageBackground } from "react-native";
 import { Login } from "./Login";
 import styles from '@/styles/GlobalSheet';
+import styles_home from "@/styles/HomeSheet";
+
+
+const BellImage = '../assets/images/notification_bell.png'
+const LogoImage = '../assets/images/Stardust_logo.png'
+
+
 export default function Home() {
   return (
     <View>
-        <ScrollView>
+        <ImageBackground>
+            <ScrollView>
 
-        </ScrollView>
-        <Text>
-            Monday, October 14th
-        </Text>
-        <View style={styles.Footer}>
+            </ScrollView>
+            <Text>
+                Monday, October 14th
+            </Text>
+            <Pressable>
+                <Image source={require(BellImage)}>
 
-        </View>
+                </Image>
+            </Pressable>
+            <Image source={require(LogoImage)}>
+
+            </Image>
+            <Text style={styles_home.HeadingHome}> Welcome back</Text>
+            <Text>Location</Text>
+            <View style={styles_home.MedsReminder}>
+                <Text>THis is MedsReminder</Text>
+            </View>
+            <View style={styles_home.SocialReminders}>
+                <Text>THis is Social Reminders</Text>   
+            </View>
+
+
+            <View style={styles.Footer}>
+
+            </View>
+        </ImageBackground>
+        
     </View>
   )
 }

@@ -23,7 +23,7 @@ let styles = StyleSheet.create({
     left: 0,
   },
   Footer: {
-    
+
   }
 
 });

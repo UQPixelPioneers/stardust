@@ -3,17 +3,17 @@ import { View, Text, ImageBackground, Image, TextInput, Pressable } from 'react-
 import styles from '@/styles/GlobalSheet';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
-const bg_image = '../assets/Background-img/Stardust-bg.png';
-const Logo_image = '../assets/images/Stardust_logo.png'
+const BgImage = '../assets/Background-img/Stardust-bg.png';
+const LogoImage = '../assets/images/Stardust_logo.png'
 
 export const Login = () => {
-    const [text, onChangeText] = React.useState('');
+    const [text, onChangeText] = React.useState('aaaaaa');
     return (
         <View style={styles.container}>
             <ImageBackground
-            source={require(bg_image)}
+            source={require(BgImage)}
             style={styles.backgroundImage}>
-                <Image source={require(Logo_image)}>
+                <Image source={require(LogoImage)}>
 
                 </Image>
                 <TextInput

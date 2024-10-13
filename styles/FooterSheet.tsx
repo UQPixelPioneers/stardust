@@ -2,15 +2,26 @@ import { StyleSheet } from 'react-native';
 
 let styles_footer = StyleSheet.create({
     IconActive: {
-        height: 20,
-        width: 10,
+        flexGrow: 1, // This box will grow to fill twice as much space as the others
+        flexShrink: 1, // This box will shrink if necessary
+        flexBasis: 50, // Starts at 100px width
+        aspectRatio: 1,
+        height: undefined,
+        padding: 30,
     },
     IconInactive: {
-        height: 20,
-        width: 20,
+        flexGrow: 1, // This box will grow to fill twice as much space as the others
+        flexShrink: 1, // This box will shrink if necessary
+        flexBasis: 50, // Starts at 100px width
+        aspectRatio: 1,
+        height: undefined,
+        tintColor: "#CFACC5",
+        padding: 30,
     },
     Footer: {
-
+        flexDirection: "row",
+        alignItems: "center",
+        justifyContent: "space-evenly",
     },
 
 });

@@ -6,7 +6,7 @@ import styles_medication from "@/styles/MedicationSheet";
 export const MedicationEntry = () =>  {
   return (
     <View>
-        <Image source={require("../assets/images/Pill.png")} style= {styles_medication.PillIcon}>
+        <Image source={require("../assets/images/pillIcon.png")} style= {styles_medication.PillIcon}>
 
         </Image>
         <Text>

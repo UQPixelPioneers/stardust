@@ -5,6 +5,7 @@ import styles from '@/styles/GlobalSheet';
 import styles_login from '@/styles/LoginSheet';
 import { useNavigation } from '@react-navigation/native';
 import {BounceableImage} from "@/components/BounceableImage";
+import styles_home from "@/styles/HomeSheet";
 
 const BgImage = '../assets/Background-img/Stardust-bg.png';
 const LogoImage = '../assets/images/stardustLogo.png'
@@ -34,7 +35,7 @@ export const Login = () => {
             <ImageBackground
             source={require(BgImage)}
             style={styles.backgroundImage}>
-                <BounceableImage source={require(LogoImage)} max_scale={1.2} duration={400} style={styles_login.logo}/>
+                <BounceableImage source={require(LogoImage)} max_scale={1.2} duration={275} style={styles_home.Logo}/>
                 <TextInput
                     style={styles.input}
                     placeholder={usernamePlaceholder}

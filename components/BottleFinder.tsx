@@ -1,7 +1,6 @@
 ﻿import React from 'react';
 import {Image, Text, View} from 'react-native';
 import {FC} from "react";
-import styles from "@/styles/GlobalSheet";
 import styles_home from "@/styles/HomeSheet";
 
 const bottleIcon = '../assets/images/bottleIcon.png';
@@ -19,7 +18,7 @@ export const BottleFinder: FC = () => {
     const formattedBottleDetails = `${getBottleLocation()} • ${getBottleDistance()}`;
 
     return (
-        <View style={styles.container}>
+        <View style={styles_home.BottleStatus}>
             <Image source={require(bottleIcon)} style={styles_home.BottleIcon}/>
             <Text style={styles_home.BottleLabel}>{formattedBottleDetails}</Text>
         </View>

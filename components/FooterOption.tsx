@@ -7,15 +7,15 @@ interface FooterOptionProps {
     nav: any;
     route: RouteProp<ParamListBase>;
     routeName: string;
-    routeIconURI: ImageSourcePropType;
+    routeIcon: ImageSourcePropType;
 }
 
-export const FooterOption: FC<FooterOptionProps> = ({ nav, route, routeName, routeIconURI }) => {
+export const FooterOption: FC<FooterOptionProps> = ({ nav, route, routeName, routeIcon }) => {
     return (
         <Pressable onPress={ () => nav.navigate(routeName)}>
             <Image
                 style={route.name == routeName ? styles_footer.IconActive : styles_footer.IconInactive }
-                source={routeIconURI}
+                source={routeIcon}
             />
         </Pressable>
     );

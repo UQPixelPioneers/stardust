@@ -14,10 +14,10 @@ export const Footer = ({}) => {
     const route = useRoute();
     return (
         <View style={styles_footer.Footer}>
-            <FooterOption nav={navigation} route={route} routeName="Home" routeIconURI={require(homeIcon)}/>
-            <FooterOption nav={navigation} route={route} routeName="Management" routeIconURI={require(manageIcon)}/>
-            <FooterOption nav={navigation} route={route} routeName="Social" routeIconURI={require(socialIcon)}/>
-            <FooterOption nav={navigation} route={route} routeName="Setting" routeIconURI={require(settingsIcon)}/>
+            <FooterOption nav={navigation} route={route} routeName="Home" routeIcon={require(homeIcon)}/>
+            <FooterOption nav={navigation} route={route} routeName="Management" routeIcon={require(manageIcon)}/>
+            <FooterOption nav={navigation} route={route} routeName="Social" routeIcon={require(socialIcon)}/>
+            <FooterOption nav={navigation} route={route} routeName="Setting" routeIcon={require(settingsIcon)}/>
         </View>
     );
 }

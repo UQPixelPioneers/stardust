@@ -7,9 +7,27 @@ import {IntervalUpdater} from "@/components/IntervalUpdater";
 import {BottleFinder} from "@/components/BottleFinder";
 import {BounceableImage} from "@/components/BounceableImage";
 import styles_login from "@/styles/LoginSheet";
+import {HorizontalScrollable} from "@/components/HorizontalScrollable";
 
 const BellImage = '../assets/images/notification_bell.png'
 const LogoImage = '../assets/images/stardustLogoColor.png'
+
+
+import { StyleSheet } from 'react-native';
+import {MedicationReminder} from "@/components/MedicationReminder";
+import {SocialReminder} from "@/components/SocialReminder";
+
+
+
+let test = StyleSheet.create({
+    image: {
+        borderWidth: 5,
+        borderColor: 'red',
+        height: 100, // Set a height for visibility
+    },
+});
+
+
 
 export const Home = () => {
 
@@ -20,6 +38,18 @@ export const Home = () => {
         onUsernameUpdate("Yuki");
     }, []); // Empty dependency only runs on load
 
+    const medEntries = Array.from({ length: 7 }, (_, index) => (
+        <MedicationReminder
+            key={index + 1} // Use index + 1 for keys
+            name={"Placeholder"}
+            status={true}
+        />
+    ));
+
+    const socialEntries = Array.from({ length: 7 }, (_, index) => (
+        <SocialReminder key={index + 1}/>
+    ));
+
     return (
     <View>
         <ImageBackground>
@@ -28,15 +58,19 @@ export const Home = () => {
                 <Pressable>
                     <Image source={require(BellImage)}/>
                 </Pressable>
-                <BounceableImage source={require(LogoImage)} max_scale={1.2} duration={400} style={styles_home.Logo}/>
+                <BounceableImage source={require(LogoImage)} max_scale={1.2} duration={275} style={styles_home.Logo}/>
                 <Text style={styles_home.HeadingHome}>Welcome back, {user}!</Text>
                 <IntervalUpdater interval={500} children={<BottleFinder/>}/>
-                <View style={styles_home.MedsReminder}>
-                    <Text>THis is MedsReminder</Text>
-                </View>
-                <View style={styles_home.SocialReminders}>
-                    <Text>THis is Social Reminders</Text>
-                </View>
+                <HorizontalScrollable
+                    elemNum={3}
+                    style={styles_home.MedsReminders}
+                    styleContainer={styles_home.MedsContain}
+                    children={medEntries}/>
+                <HorizontalScrollable
+                    elemNum={3}
+                    style={styles_home.SocialReminders}
+                    styleContainer={styles_home.SocialContain}
+                    children={socialEntries}/>
             </ScrollView>
 
 

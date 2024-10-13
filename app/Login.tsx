@@ -7,7 +7,24 @@ const bg_image = '../assets/Background-img/Stardust-bg.png';
 const Logo_image = '../assets/images/Stardust_logo.png'
 
 export const Login = () => {
-    const [text, onChangeText] = React.useState('');
+
+    const [errorMessage, onErrorMessageUpdate] = React.useState('');
+
+    const onPressFunction = ({username, password}: { username: any, password: any }) => {
+        if (!username || !password) {
+            // Alert the user if fields are empty
+            onErrorMessageUpdate("Error! Please enter a username & password");
+            return;
+        }
+        // Successful Login (Additional verification would be done above.
+        //navigation.navigate('Details')}
+    }
+
+    const usernamePlaceholder = "Username";
+    const passwordPlaceholder = "Password";
+    const [usernameEntry, onChangeUsername] = React.useState('');
+    const [passwordEntry, onChangePassword] = React.useState('');
+
     return (
         <View style={styles.container}>
             <ImageBackground
@@ -18,15 +35,18 @@ export const Login = () => {
                 </Image>
                 <TextInput
                     style={styles.input}
-                    onChangeText={onChangeText}
-                    value={text}
+                    placeholder={usernamePlaceholder}
+                    onChangeText={onChangeUsername}
+                    value={usernameEntry}
                 />
                 <TextInput
                     style={styles.input}
-                    onChangeText={onChangeText}
-                    value={text}
+                    placeholder={passwordPlaceholder}
+                    onChangeText={onChangePassword}
+                    value={passwordEntry}
                 />
-                <Pressable>
+                <Text>{errorMessage}</Text>
+                <Pressable onPress={() => onPressFunction({username: {usernameEntry}, password: {passwordEntry}})}>
                     <View>
                         <Text>Login</Text>
                     </View>
@@ -34,4 +54,4 @@ export const Login = () => {
             </ImageBackground>
       </View>
     );
-}
+};

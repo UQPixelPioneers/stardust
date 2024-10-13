@@ -29,8 +29,8 @@ export const FormattedDate: FC = () => {
     const formattedDate = `${weekday}, ${month} ${dateWithSuffix}`;
 
     return (
-        <View style={styles.container}>
+        <>
             <Text style={styles.Date}>{formattedDate}</Text>
-        </View>
+        </>
     );
 };

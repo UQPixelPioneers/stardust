@@ -1,5 +1,5 @@
 import React, {FC, useRef} from 'react';
-import { View, Animated, ImageSourcePropType, ImageStyle, StyleProp, Pressable } from 'react-native';
+import { Animated, ImageSourcePropType, ImageStyle, StyleProp, Pressable } from 'react-native';
 
 interface BounceableImageProps {
     source: ImageSourcePropType;
@@ -48,11 +48,11 @@ export const BounceableImage: FC<BounceableImageProps> = ({ source, style, max_s
     };
 
     return (
-        <Animated.View style={[style, { flex: 1, transform: [{ scale: bounceAnim }] }]}>
-            <Pressable onPress={() => animate(true)} style={[{flex: 1}]}>
+        <Animated.View>
+            <Pressable onPress={() => animate(true)}>
                 <Animated.Image
                     source={source}
-                    style={{ width: '100%', height: '100%', resizeMode: 'contain' }}
+                    style={[style, { transform: [{ scale: bounceAnim }] }]}
                 />
             </Pressable>
         </Animated.View>

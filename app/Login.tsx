@@ -1,13 +1,13 @@
 // @ts-ignore
 import React = require('react');
-import { View, Text, ImageBackground, Image, TextInput, Pressable } from 'react-native'
+import { View, Text, ImageBackground, TextInput, Pressable } from 'react-native'
 import styles from '@/styles/GlobalSheet';
 import styles_login from '@/styles/LoginSheet';
 import { useNavigation } from '@react-navigation/native';
 import {BounceableImage} from "@/components/BounceableImage";
 import styles_home from "@/styles/HomeSheet";
 
-const BgImage = '../assets/Background-img/mainBackground.png';
+const BgImage = '../assets/backgrounds/mainBackground.png';
 const LogoImage = '../assets/images/stardustLogo.png'
 
 export const Login = () => {

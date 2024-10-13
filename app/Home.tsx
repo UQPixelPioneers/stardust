@@ -20,17 +20,6 @@ import {MedicationReminder} from "@/components/MedicationReminder";
 import {SocialReminder} from "@/components/SocialReminder";
 
 
-
-let test = StyleSheet.create({
-    image: {
-        borderWidth: 5,
-        borderColor: 'red',
-        height: 100, // Set a height for visibility
-    },
-});
-
-
-
 export const Home = () => {
 
     const [user, onUsernameUpdate] = React.useState('');
@@ -54,7 +43,7 @@ export const Home = () => {
 
     return (
     <>
-        <ImageBackground source={require("../assets/Background-img/homeBackground.png")} style={styles.Background}>
+        <ImageBackground source={require("@/assets/backgrounds/homeBackground.png")} style={styles.Background}>
             <SafeAreaProvider>
             <SafeAreaView  style={styles_home.Page}>
             <ScrollView style ={styles_home.Scrollable} showsVerticalScrollIndicator={true} persistentScrollbar={true}>

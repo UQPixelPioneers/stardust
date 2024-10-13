@@ -1,11 +1,11 @@
 import * as React from 'react';
-import { View, Text, ImageBackground, Image, TextInput, Pressable } from 'react-native'
+import { View, Text, ImageBackground, Pressable } from 'react-native'
 import styles from '@/styles/GlobalSheet';
 import { useNavigation } from '@react-navigation/native';
 import {BounceableImage} from "@/components/BounceableImage";
 import styles_home from "@/styles/HomeSheet";
 
-const BgImage = '../assets/Background-img/whiteBackground.png';
+const BgImage = '../assets/backgrounds/whiteBackground.png';
 const LogoImage = '../assets/images/stardustLogoColor.png'
 
 export const Startup = () => {

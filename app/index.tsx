@@ -1,14 +1,19 @@
-import { Text, View } from "react-native";
+
 import { Login } from "./Login";
-import Home from "./Home";
-import styles from '@/styles/GlobalSheet';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { NavigationContainer } from '@react-navigation/native';
+import React from "react";
+
+const Stack = createNativeStackNavigator();
+
 export default function Index() {
   return (
-    <View
-      style={styles.GlobalView}
-    >
-      {/* <Login></Login> */}
-    <Home></Home>      
-    </View>
+      <NavigationContainer>
+        <Stack.Navigator>
+          <Stack.Screen name="Home" component={Login} />
+        </Stack.Navigator>
+      </NavigationContainer>
   );
 }
+
+

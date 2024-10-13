@@ -3,7 +3,7 @@ import { View, Text, ImageBackground, Image, TextInput, Pressable } from 'react-
 import styles from '@/styles/GlobalSheet';
 
 const BgImage = '../assets/Background-img/Stardust-bg.png';
-const LogoImage = '../assets/images/Stardust_logo.png'
+const LogoImage = '../assets/images/stardustLogo.png'
 
 export const Signup = () => {
     const [text, onChangeText] = React.useState('');

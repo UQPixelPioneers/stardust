@@ -6,7 +6,7 @@ import styles_login from '@/styles/LoginSheet';
 import { useNavigation } from '@react-navigation/native';
 
 const BgImage = '../assets/Background-img/Stardust-bg.png';
-const LogoImage = '../assets/images/Stardust_logo.png'
+const LogoImage = '../assets/images/stardustLogo.png'
 
 export const Login = () => {
     const navigation = useNavigation<any>();

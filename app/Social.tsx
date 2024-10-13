@@ -6,8 +6,8 @@ import styles from '@/styles/GlobalSheet';
 
 export const Social = () =>  {
   return (
-    <View>
+    <>
       <Text>Shit Social</Text>
-    </View>
+    </>
   );
 }

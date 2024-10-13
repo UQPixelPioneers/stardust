@@ -51,7 +51,6 @@ export const Medication = () =>  {
 
       </ImageBackground>
 
-      <Footer></Footer>
     </View>
 
   );

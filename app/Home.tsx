@@ -30,6 +30,7 @@ export const Home = () => {
 
       });
 
+
     // Loads current user. Should ideally load from account
     React.useEffect(() => {
         onUsernameUpdate("Yuki");
@@ -52,8 +53,8 @@ export const Home = () => {
     <>
         <ImageBackground source={require("@/assets/backgrounds/homeBackground.png")} style={styles.Background}>
             <SafeAreaProvider>
-            <SafeAreaView  style={styles_home.Page}>
-            <ScrollView style ={styles_home.Scrollable} >
+            <SafeAreaView  style={styles.Page}>
+            <ScrollView style ={styles.Scrollable} >
                 <View style={styles_home.DateBellContainer}>
                     <IntervalUpdater interval={1000} children={<FormattedDate/>}/>
                     <Pressable>
@@ -62,15 +63,15 @@ export const Home = () => {
                 </View>
 
                 <BounceableImage source={require(LogoImage)} max_scale={1.2} duration={275} style={styles_home.Logo}/>
-                <Text style={styles_home.HeadingHome}>Welcome back, {user}!</Text>
+                <Text style={styles.Heading}>Welcome back, {user}!</Text>
                 <IntervalUpdater interval={500} children={<BottleFinder/>}/>
-                <Text style={styles_home.Heading2Home}>Your Medication today!</Text>
+                <Text style={styles.Heading2}>Your Medication today!</Text>
                 <HorizontalScrollable
                     elemNum={3}
                     style={styles_home.MedsReminders}
                     styleContainer={styles_home.MedsContain}
                     children={medReminders}/>
-                <Text style={styles_home.Heading2Home}>Friend's Streak!</Text>
+                <Text style={styles.Heading2}>Friend's Streak!</Text>
                 <HorizontalScrollable
                     elemNum={3}
                     style={styles_home.SocialReminders}

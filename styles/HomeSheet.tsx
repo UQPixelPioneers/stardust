@@ -12,16 +12,6 @@ let styles_home = StyleSheet.create({
         marginBottom: 50,
         marginRight: 5,
     },
-    HeadingHome: {
-        fontSize: 40,
-        fontFamily: "ArialBold",
-    },
-    Heading2Home: {
-        paddingTop: 10,
-        marginTop: 10,
-        fontSize: 15,
-        fontFamily: "ArialBold",
-    },
     MedsReminders: {
         height: "100%",
         backgroundColor: "white",
@@ -97,17 +87,6 @@ let styles_home = StyleSheet.create({
         position: "relative",
         
         
-    },
-
-    Scrollable: {
-        flex:1,
-
-
-    },
-    Page: {
-        margin: 10,
-        flex: 1,
-
     },
     BellIcon: {
         width: 50,

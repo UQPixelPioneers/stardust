@@ -7,8 +7,8 @@ import styles from '@/styles/GlobalSheet';
 
 export  const Setting = () =>  {
   return (
-    <View>
+    <>
       <Text></Text>
-    </View>
+    </>
   );
 }

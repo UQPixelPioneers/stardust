@@ -10,6 +10,23 @@ let styles = StyleSheet.create({
   Background: {
     height: "100%",
   },
+  Heading: {
+    fontSize: 40,
+    fontFamily: "ArialBold",
+  },
+  Heading2: {
+    paddingTop: 10,
+    marginTop: 10,
+    fontSize: 15,
+    fontFamily: "ArialBold",
+  },
+  Scrollable: {
+    flex:1,
+  },
+  Page: {
+      margin: 10,
+      flex: 1,
+  },
   Container: {
     flex: 1
   },

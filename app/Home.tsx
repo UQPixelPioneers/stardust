@@ -10,7 +10,7 @@ export default function Home() {
         <Text>
             Monday, October 14th
         </Text>
-        <View>
+        <View style={styles.Footer}>
 
         </View>
     </View>

@@ -3,6 +3,7 @@ import styles from '@/styles/GlobalSheet';
 import { Footer } from "@/components/Footer";
 import { BackButton } from "./BackButton";
 import { MedicationEntry } from "./MedicationEntry";
+import { AddButton } from "./AddButton";
 
 
 export const Medication = () =>  {
@@ -10,11 +11,7 @@ export const Medication = () =>  {
     <View>
       <ImageBackground>
         <BackButton></BackButton>
-        <Pressable>
-            <Image source={require("../assets/images/AddButton.png")} style={styles.AddButton} >
-
-            </Image>
-        </Pressable>
+        <AddButton></AddButton>
 
       <Text>Medication</Text>
       <Text>You have taken your medication</Text>

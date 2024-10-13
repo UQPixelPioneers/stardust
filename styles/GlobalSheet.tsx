@@ -22,9 +22,7 @@ let styles = StyleSheet.create({
     padding: 10,
     left: 0,
   },
-  Footer: {
 
-  }
 
 });
 

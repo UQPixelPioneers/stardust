@@ -4,7 +4,7 @@ import styles from '@/styles/GlobalSheet';
 export default function Setting() {
   return (
     <View>
-
+      <Text></Text>
     </View>
   );
 }

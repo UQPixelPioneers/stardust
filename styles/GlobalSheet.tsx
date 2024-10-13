@@ -11,10 +11,12 @@ let styles = StyleSheet.create({
     flex: 1
   },
   BackArrow:{
-
+    width: 30,
+    height: 30,
   },
   AddButton:{
-
+    width: 30,
+    height: 30,
   },
   backgroundImage: {
     flex: 1,

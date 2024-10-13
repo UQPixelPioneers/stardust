@@ -48,13 +48,13 @@ export const BounceableImage: FC<BounceableImageProps> = ({ source, style, max_s
     };
 
     return (
-        <View>
-            <Pressable onPress={() => animate(true)}>
+        <Animated.View style={[style, { flex: 1, transform: [{ scale: bounceAnim }] }]}>
+            <Pressable onPress={() => animate(true)} style={[{flex: 1}]}>
                 <Animated.Image
                     source={source}
-                    style={[style, { transform: [{ scale: bounceAnim }] }]} // Apply scale transform
+                    style={{ width: '100%', height: '100%', resizeMode: 'contain' }}
                 />
             </Pressable>
-        </View>
+        </Animated.View>
     );
 };

@@ -5,13 +5,13 @@ import styles_login from "@/styles/LoginSheet";
 import {BounceableImage} from "@/components/BounceableImage";
 import styles_home from "@/styles/HomeSheet";
 
-const BgImage = '../assets/Background-img/Stardust-bg.png';
+const BgImage = '../assets/Background-img/mainBackground.png';
 const LogoImage = '../assets/images/stardustLogo.png'
 
 export const Signup = () => {
     const [text, onChangeText] = React.useState('');
     return (
-        <View style={styles.container}>
+        <View style={styles.Container}>
             <ImageBackground
             source={require(BgImage)}
             style={styles.backgroundImage}>

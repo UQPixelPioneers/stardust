@@ -5,12 +5,14 @@ import { StyleSheet } from 'react-native';
 
 let styles_home = StyleSheet.create({
     Logo: {
-        width: 75,
-        height: 75,
-        marginTop: 25,
+        width: 10,
+        aspectRatio: 1,
+        height: undefined,
         marginLeft: 10,
-        marginBottom: 50,
+        //marginBottom:5,
         marginRight: 5,
+        borderWidth: 2,
+        borderColor: "red",
     },
     HeadingHome: {
 

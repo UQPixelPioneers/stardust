@@ -54,7 +54,7 @@ export const Home = () => {
 
     return (
     <>
-        <ImageBackground source={require("../assets/Background-img/Home_Bg.png")} style={styles.Background}>
+        <ImageBackground source={require("../assets/Background-img/homeBackground.png")} style={styles.Background}>
             <SafeAreaProvider>
             <SafeAreaView  style={styles_home.Page}>
             <ScrollView style ={styles_home.Scrollable} showsVerticalScrollIndicator={true} persistentScrollbar={true}>

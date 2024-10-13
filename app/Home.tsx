@@ -6,11 +6,8 @@ import {FormattedDate} from "@/components/FormattedDate";
 import {IntervalUpdater} from "@/components/IntervalUpdater";
 import {BottleFinder} from "@/components/BottleFinder";
 
-
-
 const BellImage = '../assets/images/notification_bell.png'
-const LogoImage = '../assets/images/Stardust_logo.png'
-
+const LogoImage = '../assets/images/stardustLogo.png'
 
 export const Home = () => {
 

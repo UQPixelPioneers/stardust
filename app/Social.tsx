@@ -8,7 +8,6 @@ export const Social = () =>  {
   return (
     <View>
       <Text>Shit Social</Text>
-      <Footer></Footer>
     </View>
   );
 }

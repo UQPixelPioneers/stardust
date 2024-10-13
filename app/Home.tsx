@@ -71,8 +71,6 @@ export const Home = () => {
                     styleContainer={styles_home.SocialContain}
                     children={socialEntries}/>
             </ScrollView>
-
-            <Footer></Footer>
             </SafeAreaView>
             </SafeAreaProvider>
         </ImageBackground>

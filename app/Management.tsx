@@ -24,8 +24,6 @@ export const Management = () =>  {
       </Pressable>
 
       </ImageBackground>
-
-      <Footer></Footer>
     </>
 
   );

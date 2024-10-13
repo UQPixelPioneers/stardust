@@ -9,7 +9,6 @@ export  const Setting = () =>  {
   return (
     <View>
       <Text></Text>
-      <Footer></Footer>
     </View>
   );
 }

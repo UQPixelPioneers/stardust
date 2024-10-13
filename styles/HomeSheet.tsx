@@ -11,8 +11,6 @@ let styles_home = StyleSheet.create({
         marginLeft: 10,
         marginBottom: 50,
         marginRight: 5,
-        borderWidth: 2,
-        borderColor: "red",
     },
     HeadingHome: {
 

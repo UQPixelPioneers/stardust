@@ -3,6 +3,8 @@ import { Login } from "./Login";
 import { Footer } from "@/components/Footer";
 import styles from '@/styles/GlobalSheet';
 import styles_home from "@/styles/HomeSheet";
+import {FormattedDate} from "@/components/FormattedDate";
+import {IntervalUpdater} from "@/components/IntervalUpdater";
 
 
 const BellImage = '../assets/images/notification_bell.png'
@@ -16,9 +18,7 @@ export const Home = () => {
             <ScrollView>
 
             </ScrollView>
-            <Text>
-                Monday, October 14th
-            </Text>
+            <IntervalUpdater interval={1000} children={<FormattedDate/>}/>
             <Pressable>
                 <Image source={require(BellImage)}>
 

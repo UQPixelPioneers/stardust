@@ -24,6 +24,9 @@ let styles = StyleSheet.create({
   },
   Footer: {
 
+  },
+  Date: {
+
   }
 
 });

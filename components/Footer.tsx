@@ -1,5 +1,5 @@
 import { Text, View, Pressable, Image,} from "react-native";
-import Home from "@/app/Home";
+import { Home } from "@/app/Home";
 import { Login } from "@/app/Login";
 import styles_footer from "@/styles/FooterSheet";
 import {useRoute} from '@react-navigation/native';

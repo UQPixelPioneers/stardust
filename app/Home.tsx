@@ -14,8 +14,6 @@ export const Home = () => {
     <View>
         <ImageBackground>
             <ScrollView>
-
-            </ScrollView>
             <Text>
                 Monday, October 14th
             </Text>
@@ -35,6 +33,8 @@ export const Home = () => {
             <View style={styles_home.SocialReminders}>
                 <Text>THis is Social Reminders</Text>   
             </View>
+            </ScrollView>
+
 
 
             <Footer></Footer>

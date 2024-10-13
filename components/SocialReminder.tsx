@@ -13,22 +13,23 @@ interface SocialReminderProps {
 
 const bellIcon = "../assets/images/notification_bell.png";
 const avatarIcon = "../assets/images/avatarIcon.png";
-const fireIcon = "../assets/images/manageIcon.png";
+const fireIcon = "../assets/images/fireIcon.png";
 
 export const SocialReminder : FC<SocialReminderProps> = ({ avatar, streak, style }) => {
     const avatarIconDisplay = avatar ? avatar : require(avatarIcon);
     const fireIconDisplay = require(fireIcon);
     const bellIconDisplay = require(bellIcon);
 
-    const mergedStyle = [styles_home.SocialBubble, style];
+    const mergedStyle = [styles_home.Bubble, style];
 
     return (
       <View style={mergedStyle}>
-        <Image source={bellIconDisplay} style={styles_social.BellIcon} />
+        {/* <Image source={bellIconDisplay} style={styles_social.BellIcon} /> */}
         <Image source={avatarIconDisplay} style={styles_social.AvatarIcon} />
-        <View>
+
+        <View style={styles_social.Status}>
           <Image source={fireIconDisplay} style={styles_social.FireIcon} />
-          <Text>{streak}</Text>
+          <Text style={styles_social.Streak}>{streak}</Text>
         </View>
       </View>
     );

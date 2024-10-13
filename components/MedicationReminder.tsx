@@ -23,7 +23,7 @@ export const MedicationReminder : FC<MedicationReminderProps> = ({ name, status,
     const pillIconDisplay = require(pillIcon)
     const statusIcon = status ? require(statusGoodIcon) : require(statusBadIcon);
 
-    const mergedStyle = [styles_home.MedsBubble, style];
+    const mergedStyle = [styles_home.Bubble, style];
 
     return (
         <View style={mergedStyle}>

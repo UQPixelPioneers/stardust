@@ -19,7 +19,7 @@ const Stack = createNativeStackNavigator();
 
 export default function Index() {
 
-    const landingRoute = "Startup";
+    const landingRoute = "Home";
 
     return (
       <Stack.Navigator initialRouteName={landingRoute}>

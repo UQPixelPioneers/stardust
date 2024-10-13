@@ -27,12 +27,9 @@ export const Home = () => {
             <ScrollView>
                 <IntervalUpdater interval={1000} children={<FormattedDate/>}/>
                 <Pressable>
-                    <Image source={require(BellImage)}>
-
-                    </Image>
+                    <Image source={require(BellImage)}/>
                 </Pressable>
                 <Image source={require(LogoImage)}>
-
                 </Image>
                 <Text style={styles_home.HeadingHome}>Welcome back, {user}!</Text>
                 <IntervalUpdater interval={500} children={<BottleFinder/>}/>

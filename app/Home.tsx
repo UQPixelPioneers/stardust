@@ -5,9 +5,11 @@ import styles_home from "@/styles/HomeSheet";
 import {FormattedDate} from "@/components/FormattedDate";
 import {IntervalUpdater} from "@/components/IntervalUpdater";
 import {BottleFinder} from "@/components/BottleFinder";
+import {BounceableImage} from "@/components/BounceableImage";
+import styles_login from "@/styles/LoginSheet";
 
 const BellImage = '../assets/images/notification_bell.png'
-const LogoImage = '../assets/images/stardustLogo.png'
+const LogoImage = '../assets/images/stardustLogoColor.png'
 
 export const Home = () => {
 
@@ -26,8 +28,7 @@ export const Home = () => {
                 <Pressable>
                     <Image source={require(BellImage)}/>
                 </Pressable>
-                <Image source={require(LogoImage)}>
-                </Image>
+                <BounceableImage source={require(LogoImage)} max_scale={1.2} duration={400} style={styles_home.Logo}/>
                 <Text style={styles_home.HeadingHome}>Welcome back, {user}!</Text>
                 <IntervalUpdater interval={500} children={<BottleFinder/>}/>
                 <View style={styles_home.MedsReminder}>

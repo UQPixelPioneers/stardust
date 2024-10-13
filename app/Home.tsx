@@ -9,7 +9,7 @@ const BellImage = '../assets/images/notification_bell.png'
 const LogoImage = '../assets/images/Stardust_logo.png'
 
 
-export default function Home() {
+export const Home = () => {
   return (
     <View>
         <ImageBackground>

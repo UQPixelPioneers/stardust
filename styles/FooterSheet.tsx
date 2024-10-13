@@ -8,6 +8,7 @@ let styles_footer = StyleSheet.create({
         aspectRatio: 1,
         height: undefined,
         padding: 30,
+        width: 30,
     },
     IconInactive: {
         flexGrow: 1, // This box will grow to fill twice as much space as the others
@@ -17,11 +18,21 @@ let styles_footer = StyleSheet.create({
         height: undefined,
         tintColor: "#CFACC5",
         padding: 30,
+        width: 30,
     },
     Footer: {
         flexDirection: "row",
         alignItems: "center",
         justifyContent: "space-evenly",
+        position: 'absolute',
+        bottom: 0,
+        left: 0,
+        right: 0,
+        paddingBottom: 20,
+        flex: 2,
+        backgroundColor: "white",
+        paddingTop: 10,
+        borderRadius: 10,
     },
 
 });

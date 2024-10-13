@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Text, View, ScrollView, Pressable, Image, ImageBackground } from "react-native";
+import { Text, View, ScrollView, Pressable, Image, ImageBackground, SafeAreaView } from "react-native";
 import { Footer } from "@/components/Footer";
 import styles_home from "@/styles/HomeSheet";
 import {FormattedDate} from "@/components/FormattedDate";
@@ -52,17 +52,21 @@ export const Home = () => {
 
     return (
     <View>
-        <ImageBackground>
-            <ScrollView>
-                <IntervalUpdater interval={1000} children={<FormattedDate/>}/>
-                <Pressable>
-                    <Image source={require(BellImage)}/>
-                </Pressable>
+        <ImageBackground source={require("../assets/Background-img/Home_Bg.png")} style={styles_home.Background}>
+            <SafeAreaView  style={styles_home.Page}>
+            <ScrollView style ={styles_home.Scrollable}>
+                <View style={styles_home.DateBellContainer}>
+                    <IntervalUpdater interval={1000} children={<FormattedDate/>}/>
+                    <Pressable>
+                        <Image source={require(BellImage)} style={styles_home.BellIcon}/>
+                    </Pressable>
+                </View>
+
                 <BounceableImage source={require(LogoImage)} max_scale={1.2} duration={275} style={styles_home.Logo}/>
                 <Text style={styles_home.HeadingHome}>Welcome back, {user}!</Text>
                 <IntervalUpdater interval={500} children={<BottleFinder/>}/>
                 <HorizontalScrollable
-                    elemNum={3}
+                    elemNum={4}
                     style={styles_home.MedsReminders}
                     styleContainer={styles_home.MedsContain}
                     children={medEntries}/>
@@ -73,9 +77,8 @@ export const Home = () => {
                     children={socialEntries}/>
             </ScrollView>
 
-
-
             <Footer></Footer>
+            </SafeAreaView>
         </ImageBackground>
         
     </View>

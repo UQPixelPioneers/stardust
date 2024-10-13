@@ -5,8 +5,12 @@ import { StyleSheet } from 'react-native';
 
 let styles_home = StyleSheet.create({
     Logo: {
-        width: 100,
-        height: 100,
+        width: 75,
+        height: 75,
+        marginTop: 25,
+        marginLeft: 10,
+        marginBottom: 50,
+        marginRight: 5,
     },
     HeadingHome: {
 
@@ -42,7 +46,7 @@ let styles_home = StyleSheet.create({
     },
     SocialReminders: {
         borderColor: "red",
-        borderWidth: 10,
+        borderWidth: 3,
         height: "100%",
     },
     SocialContain: {
@@ -55,6 +59,31 @@ let styles_home = StyleSheet.create({
     SocialBubble: {
         aspectRatio: "1",
         flex: 1,
+    },
+    Background: {
+
+        height: "100%",
+    },
+    Scrollable: {
+        
+        flexGrow: 1,
+
+    },
+    Page: {
+        margin: 10,
+        flex: 1,
+
+    },
+    BellIcon: {
+        width: 50,
+        height: 50,
+    },
+    DateBellContainer:{
+        flexGrow: 1,
+        flexDirection: "row",
+        justifyContent: "space-between",
+        paddingRight: 20,
+        paddingLeft: 5,
     },
 });
 

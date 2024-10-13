@@ -2,6 +2,7 @@
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import React from "react";
 
+import {Startup} from "./Startup";
 import {Home} from "./Home";
 import {Login} from "./Login";
 import { Management } from './Management';
@@ -18,10 +19,11 @@ const Stack = createNativeStackNavigator();
 
 export default function Index() {
 
-    const landingRoute = "Home";
+    const landingRoute = "Startup";
 
     return (
       <Stack.Navigator initialRouteName={landingRoute}>
+          <Stack.Screen name="Startup" component={Startup} options={{headerShown: false}} />
           <Stack.Screen name="Home" component={Home} options={{headerShown: false}} />
           <Stack.Screen name="Login" component={Login} options={{headerShown: false}} />
           <Stack.Screen name="Management" component={Management} options={{headerShown: false}} />

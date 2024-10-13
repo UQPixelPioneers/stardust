@@ -16,8 +16,6 @@ export const Home = () => {
     <View>
         <ImageBackground>
             <ScrollView>
-
-            </ScrollView>
             <IntervalUpdater interval={1000} children={<FormattedDate/>}/>
             <Pressable>
                 <Image source={require(BellImage)}>
@@ -35,6 +33,8 @@ export const Home = () => {
             <View style={styles_home.SocialReminders}>
                 <Text>THis is Social Reminders</Text>   
             </View>
+            </ScrollView>
+
 
 
             <Footer></Footer>

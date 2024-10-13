@@ -7,7 +7,7 @@ let styles_login = StyleSheet.create({
     },
     errorText: {
 
-    }
+    },
 });
 
 export default styles_login;

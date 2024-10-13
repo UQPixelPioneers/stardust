@@ -1,10 +1,14 @@
 import { Text, View } from "react-native";
 import { Login } from "./Login";
+import { Footer } from "@/components/Footer";
 import styles from '@/styles/GlobalSheet';
-export default function Social() {
+
+
+export const Social = () =>  {
   return (
     <View>
-
+      <Text>Shit Social</Text>
+      <Footer></Footer>
     </View>
   );
 }

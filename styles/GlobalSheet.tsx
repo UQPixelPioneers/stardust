@@ -10,7 +10,12 @@ let styles = StyleSheet.create({
   container: {
     flex: 1
   },
+  BackArrow:{
 
+  },
+  AddButton:{
+
+  },
   backgroundImage: {
     flex: 1,
     justifyContent: "center",

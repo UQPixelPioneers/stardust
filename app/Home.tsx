@@ -29,16 +29,13 @@ export const Home = () => {
         "ArialBold": require("../assets/fonts/Arial_Rounded_Bold.ttf"),
 
       });
-      if (!fontsLoaded) {
-        return <Text>Loading fonts...</Text>;
-      }
 
     // Loads current user. Should ideally load from account
     React.useEffect(() => {
         onUsernameUpdate("Yuki");
     }, []); // Empty dependency only runs on load
 
-    const medEntries = Array.from({ length: 7 }, (_, index) => (
+    const medReminders = Array.from({ length: 7 }, (_, index) => (
         <MedicationReminder
             key={index + 1} // Use index + 1 for keys
             name={"Placeholder"}
@@ -47,7 +44,7 @@ export const Home = () => {
         />
     ));
 
-    const socialEntries = Array.from({ length: 7 }, (_, index) => (
+    const socialReminders = Array.from({ length: 7 }, (_, index) => (
         <SocialReminder key={index + 1} streak={9} style={styles_home.SocialBubble}/>
     ));
 
@@ -72,13 +69,13 @@ export const Home = () => {
                     elemNum={3}
                     style={styles_home.MedsReminders}
                     styleContainer={styles_home.MedsContain}
-                    children={medEntries}/>
+                    children={medReminders}/>
                 <Text style={styles_home.Heading2Home}>Friend's Streak!</Text>
                 <HorizontalScrollable
                     elemNum={3}
                     style={styles_home.SocialReminders}
                     styleContainer={styles_home.SocialContain}
-                    children={socialEntries}/>
+                    children={socialReminders}/>
             </ScrollView>
             </SafeAreaView>
             </SafeAreaProvider>

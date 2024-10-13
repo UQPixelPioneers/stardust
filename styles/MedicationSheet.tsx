@@ -19,7 +19,9 @@ let styles_medication = StyleSheet.create({
     },
     StatusText: {
         flex: 4,
-    }
+    },
+    EntryName: {},
+    EntryDosage: {}
 });
 
 export default styles_medication;

@@ -16,8 +16,6 @@ export const Appointment = () =>  {
 
 
       </ImageBackground>
-
-      <Footer></Footer>
     </View>
 
   );

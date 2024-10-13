@@ -1,22 +1,43 @@
-import { Text, View, Pressable, ImageBackground, Image } from "react-native";
+import {Text, View, Image, ImageSourcePropType,} from "react-native";
 import styles_medication from "@/styles/MedicationSheet";
+import {FC, Key} from "react";
+import styles_home from "@/styles/HomeSheet";
+import {StyleProps} from "react-native-reanimated";
 
+interface MedicationEntryProps {
+    name: string;
+    dosage: number;
+    amount: number;
+    frequency: string;
+    key?: Key;
+}
 
+function numToWords(num: number): string {
+    switch (num) {
+        case 0:
+            return "zero";
+        case 1:
+            return "once";
+        case 2:
+            return "twice";
+        case 3:
+            return "thrice";
+        default:
+            return `${num} times`;
+    }
+}
 
-export const MedicationEntry = () =>  {
-  return (
-    <View>
-        <Image source={require("../assets/images/pillIcon.png")} style= {styles_medication.PillIcon}>
+const pillIcon = "../assets/images/pillIcon.png";
 
-        </Image>
-        <Text>
-            Pill's name
-        </Text>
-        <View>
-            <Text>Amount of pills</Text>
-            <Text>Times per day</Text>
-        </View>
-    </View>
+export const MedicationEntry : FC<MedicationEntryProps> = ({ name, dosage, amount, frequency }) => {
+    const pillIconDisplay = require(pillIcon);
+    const dosageInformation = `${dosage}mg • ${numToWords(amount)} ${frequency}`;
 
-  );
+    return (
+        <>
+            <Image source={pillIconDisplay} style= {styles_medication.PillIcon}/>
+            <Text style= {styles_medication.EntryName}>{name}</Text>
+            <Text style= {styles_medication.EntryDosage}>{dosageInformation}</Text>
+        </>
+    );
 }

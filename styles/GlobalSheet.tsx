@@ -7,8 +7,8 @@ let styles = StyleSheet.create({
   GlobalView: {
     flex: 1
   },
-  container: {
-    flex: 1
+  Background: {
+    height: "100%",
   },
   BackArrow:{
     width: 30,

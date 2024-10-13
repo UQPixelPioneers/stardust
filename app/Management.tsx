@@ -9,7 +9,7 @@ export const Management = () =>  {
   const navigation = useNavigation<any>();
 
   return (
-    <View>
+    <>
       <ImageBackground>
       <Text>Healthcare</Text>
       <Pressable onPress={ () => navigation.navigate("Medication")}>
@@ -26,7 +26,7 @@ export const Management = () =>  {
       </ImageBackground>
 
       <Footer></Footer>
-    </View>
+    </>
 
   );
 }

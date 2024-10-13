@@ -60,10 +60,7 @@ let styles_home = StyleSheet.create({
         aspectRatio: "1",
         flex: 1,
     },
-    Background: {
 
-        height: "100%",
-    },
     Scrollable: {
         
         flexGrow: 1,

@@ -1,13 +1,15 @@
 import * as React from 'react';
-import { Text, View, ScrollView, Pressable, Image, ImageBackground, SafeAreaView } from "react-native";
+import { Text, View, ScrollView, Pressable, Image, ImageBackground, } from "react-native";
 import { Footer } from "@/components/Footer";
+import styles from '@/styles/GlobalSheet';
 import styles_home from "@/styles/HomeSheet";
 import {FormattedDate} from "@/components/FormattedDate";
 import {IntervalUpdater} from "@/components/IntervalUpdater";
 import {BottleFinder} from "@/components/BottleFinder";
 import {BounceableImage} from "@/components/BounceableImage";
-import styles_login from "@/styles/LoginSheet";
+
 import {HorizontalScrollable} from "@/components/HorizontalScrollable";
+import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
 
 const BellImage = '../assets/images/notification_bell.png'
 const LogoImage = '../assets/images/stardustLogoColor.png'
@@ -51,8 +53,9 @@ export const Home = () => {
     ));
 
     return (
-    <View>
-        <ImageBackground source={require("../assets/Background-img/Home_Bg.png")} style={styles_home.Background}>
+    <>
+        <ImageBackground source={require("../assets/Background-img/Home_Bg.png")} style={styles.Background}>
+            <SafeAreaProvider>
             <SafeAreaView  style={styles_home.Page}>
             <ScrollView style ={styles_home.Scrollable}>
                 <View style={styles_home.DateBellContainer}>
@@ -79,8 +82,9 @@ export const Home = () => {
 
             <Footer></Footer>
             </SafeAreaView>
+            </SafeAreaProvider>
         </ImageBackground>
         
-    </View>
+    </>
   )
 }

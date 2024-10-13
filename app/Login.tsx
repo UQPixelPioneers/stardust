@@ -49,7 +49,8 @@ export const Login = () => {
                     value={passwordEntry}
                 />
                 <Text style={styles_login.errorText}>{errorMessage}</Text>
-                <Pressable onPress={() => onPressFunction({ username: usernameEntry, password: passwordEntry })}>                    <View>
+                <Pressable onPress={() => onPressFunction({ username: usernameEntry, password: passwordEntry })}>
+                    <View>
                         <Text>Login</Text>
                     </View>
                 </Pressable>

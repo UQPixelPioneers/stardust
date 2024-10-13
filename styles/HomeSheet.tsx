@@ -13,21 +13,45 @@ let styles_home = StyleSheet.create({
         marginRight: 5,
     },
     HeadingHome: {
-
+        fontSize: 40,
+        fontFamily: "ArialBold",
+    },
+    Heading2Home: {
+        paddingTop: 10,
+        marginTop: 10,
+        fontSize: 15,
+        fontFamily: "ArialBold",
     },
     MedsReminders: {
         height: "100%",
+        backgroundColor: "white",
+        margin: "5%",
+        padding: "5%",
+        borderRadius: 25,
+        shadowColor: "black",
+        shadowOffset: {
+            width: 0,
+            height: 30,
+        },
+        shadowOpacity: 1,
+        shadowRadius: 4.65,
+        elevation: 7,
     },
+
     MedsContain: {
         width: "auto",
         flexGrow: 1,
         justifyContent: 'center',
         alignItems: 'center',
         height: "100%",
+        
     },
-    MedsBubble: {
+    Bubble: {
         aspectRatio: "1",
         flex: 1,
+    },
+    MedsBubble: {
+
     },
     BottleStatus: {
         flexGrow: 1,
@@ -45,10 +69,23 @@ let styles_home = StyleSheet.create({
         flex : 1,
     },
     SocialReminders: {
-        borderColor: "red",
-        borderWidth: 3,
         height: "100%",
+        backgroundColor: "white",
+        margin: "5%",
+        padding: "5%",
+        borderRadius: 25,
+        shadowColor: "black",
+        shadowOffset: {
+            width: 0,
+            height: 30,
+        },
+        shadowOpacity: 1,
+        shadowRadius: 4.65,
+        elevation: 7,
+        position:"relative",
+
     },
+
     SocialContain: {
         width: "auto",
         flexGrow: 1,
@@ -57,8 +94,9 @@ let styles_home = StyleSheet.create({
         height: "100%",
     },
     SocialBubble: {
-        aspectRatio: "1",
-        flex: 1,
+        position: "relative",
+        
+        
     },
 
     Scrollable: {

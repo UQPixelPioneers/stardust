@@ -1,10 +1,11 @@
 
+import { Management } from '@/app/Management';
 import { StyleSheet } from 'react-native';
 
 let styles_management = StyleSheet.create({
     MedButton: {
         padding: 35,
-        backgroundColor: "red",
+        backgroundColor: "orange",
         borderRadius: 30,
         marginBottom: 50,
         marginTop: 50,
@@ -21,10 +22,11 @@ let styles_management = StyleSheet.create({
         flexDirection: "row",
         justifyContent: 'space-between',
         // gap: 0,
+        alignContent: "center",
     },
     AppointmentButton: {
         padding: 35,
-        backgroundColor: "red",
+        backgroundColor: "pink",
         borderRadius: 30,
         marginBottom: 50,
         marginTop: 50,
@@ -40,7 +42,7 @@ let styles_management = StyleSheet.create({
         //flex
         flexDirection: "row",
         justifyContent: 'space-between',
-        // gap: 0,
+
     },
     PillIcon:{
         width: 40,
@@ -50,6 +52,13 @@ let styles_management = StyleSheet.create({
         width: 40,
         height:40,
         transform: [{rotate: "180deg"}]
+    },
+    ManagementText:{
+        color: "white",
+        fontSize: 20,
+        paddingTop: 7,
+
+            
     }
 });
 

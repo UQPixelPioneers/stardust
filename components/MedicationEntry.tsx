@@ -34,10 +34,10 @@ export const MedicationEntry : FC<MedicationEntryProps> = ({ name, dosage, amoun
     const dosageInformation = `${dosage}mg • ${numToWords(amount)} ${frequency}`;
 
     return (
-        <>
+        <View style={styles_medication.EntryCard}>
             <Image source={pillIconDisplay} style= {styles_medication.PillIcon}/>
             <Text style= {styles_medication.EntryName}>{name}</Text>
             <Text style= {styles_medication.EntryDosage}>{dosageInformation}</Text>
-        </>
+        </View>
     );
 }

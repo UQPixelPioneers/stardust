@@ -1,4 +1,4 @@
-import {Text, View, Pressable, ImageBackground, Image, FlatList} from "react-native";
+import {Text, View, Pressable, ImageBackground, Image, FlatList, ScrollView} from "react-native";
 import styles from '@/styles/GlobalSheet';
 import { Footer } from "@/components/Footer";
 import { BackButton } from "./BackButton";
@@ -8,6 +8,8 @@ import {MedicationReminder} from "@/components/MedicationReminder";
 import styles_home from "@/styles/HomeSheet";
 import * as React from "react";
 import {Key} from "react";
+import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
+import styles_medication from "@/styles/MedicationSheet";
 
 
 
@@ -16,7 +18,7 @@ export const Medication = () =>  {
     // Sample data for medications
     const medEntries = Array.from({ length: 7 }, (_, index) => ({
         id: String(index + 1), // Unique id for each entry
-        name: "Medication " + (index + 1), // Example medication name
+        name: "Medication " + (index + 1) + " ", // Example medication name
         dosage: 10,
         amount: 2,
         frequency: "Daily",
@@ -33,25 +35,29 @@ export const Medication = () =>  {
     );
 
     return (
-    <View>
-      <ImageBackground>
-        <BackButton></BackButton>
-        <AddButton></AddButton>
+      <ImageBackground source={require("@/assets/backgrounds/mainBackground.png")} style={styles.Background}>
+        <SafeAreaProvider>
+          <SafeAreaView  style={styles.Page}>
 
-      <Text>Medication</Text>
-      <Text>You have taken your medication</Text>
-          <FlatList
-              data={medEntries} // Use medEntries as the data source
-              renderItem={renderItem}
-              keyExtractor={(item) => item.id}
-              numColumns={2} // Adjust as needed
-              //contentContainerStyle={styles.listContainer} // Optional styling
-          />
+            <BackButton></BackButton>
+            <AddButton></AddButton>
+
+            <Text>Medication</Text>
+            <Text>You have taken your medication</Text>
+                <FlatList
+                    style= {styles_medication.PillList}
+                    data={medEntries} // Use medEntries as the data source
+                    renderItem={renderItem}
+                    keyExtractor={(item) => item.id}
+                    numColumns={2} // Adjust as needed
+                    contentContainerStyle={styles.listContainer} // Optional styling
+                />
 
 
-      </ImageBackground>
 
-    </View>
 
+          </SafeAreaView>
+      </SafeAreaProvider>
+    </ImageBackground>
   );
 }

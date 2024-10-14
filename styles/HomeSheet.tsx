@@ -36,6 +36,24 @@ let styles_home = StyleSheet.create({
         height: "100%",
         
     },
+    PillIcon: {
+        aspectRatio: 1,
+        height: undefined,
+        flex: 1,
+    },
+    Status: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'space-between',
+    },
+    StatusIcon: {
+        aspectRatio: 1,
+        height: undefined,
+        flex: 1,
+    },
+    StatusText: {
+        flex: 4,
+    },
     Bubble: {
         aspectRatio: "1",
         flex: 1,
@@ -99,6 +117,7 @@ let styles_home = StyleSheet.create({
         paddingRight: 20,
         paddingLeft: 5,
     },
+
 });
 
 export default styles_home;

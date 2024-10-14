@@ -30,10 +30,10 @@ export const MedicationReminder : FC<MedicationReminderProps> = ({ name, status,
         <Text>
             {name}
         </Text>
-        <Image source={pillIconDisplay} style= {styles_medication.PillIcon}/>
-        <View style={styles_medication.Status}>
-            <Image source={statusIcon} style={styles_medication.StatusIcon}/>
-            <Text style={styles_medication.StatusText}>{statusText}</Text>
+        <Image source={pillIconDisplay} style= {styles_home.PillIcon}/>
+        <View style={styles_home.Status}>
+            <Image source={statusIcon} style={styles_home.StatusIcon}/>
+            <Text style={styles_home.StatusText}>{statusText}</Text>
         </View>
     </View>
 

@@ -25,7 +25,7 @@ const AddFooter = (Component: React.FC) => {
 };
 
 export default function Index() {
-    const landingRoute = "Management";
+    const landingRoute = "Home";
 
     return (
         <Stack.Navigator initialRouteName={landingRoute}>

@@ -9,6 +9,7 @@ let styles = StyleSheet.create({
   },
   Background: {
     height: "100%",
+    overflow: "hidden",
   },
   Heading: {
     fontSize: 40,
@@ -33,6 +34,8 @@ let styles = StyleSheet.create({
   BackArrow:{
     width: 30,
     height: 30,
+    marginBottom: 50,
+    tintColor: "brown",
   },
   AddButton:{
     width: 30,
@@ -49,12 +52,9 @@ let styles = StyleSheet.create({
     padding: 10,
     left: 0,
   },
-  Footer: {
+  listContainer:{
 
   },
-  Date: {
-
-  }
 
 });
 

@@ -51,6 +51,18 @@ const users: User[] = [
                 dosage: "200mg",
                 status: "Due Now",
             },
+            {
+                id: 2,
+                name: "Paracetamol",
+                dosage: "500mg",
+                status: "Taken 3 hours ago",
+            },
+            {
+                id: 3,
+                name: "Omeprazole",
+                dosage: "20mg",
+                status: "Due Tomorrow",
+            },
         ],
         friendList: [],
     },
@@ -70,10 +82,28 @@ const users: User[] = [
         ],
         medicationList: [
             {
-                id: 2,
+                id: 1,
                 name: "Paracetamol",
                 dosage: "500mg",
                 status: "Taken 4 hours ago",
+            },
+            {
+                id: 2,
+                name: "Cetirizine",
+                dosage: "10mg",
+                status: "Due Now",
+            },
+            {
+                id: 3,
+                name: "Lisinopril",
+                dosage: "10mg",
+                status: "Due in 2 hours",
+            },
+            {
+                id: 4,
+                name: "Metformin",
+                dosage: "500mg",
+                status: "Due Tonight",
             },
         ],
         friendList: [],
@@ -94,10 +124,22 @@ const users: User[] = [
         ],
         medicationList: [
             {
-                id: 3,
+                id: 1,
                 name: "Vitamin D",
                 dosage: "1000 IU",
                 status: "Due 2 hours ago",
+            },
+            {
+                id: 2,
+                name: "Amlodipine",
+                dosage: "5mg",
+                status: "Due in 30 minutes",
+            },
+            {
+                id: 3,
+                name: "Sertraline",
+                dosage: "50mg",
+                status: "Due Now",
             },
         ],
         friendList: [],
@@ -118,10 +160,22 @@ const users: User[] = [
         ],
         medicationList: [
             {
-                id: 4,
+                id: 1,
                 name: "Aspirin",
                 dosage: "81mg",
                 status: "Due Now",
+            },
+            {
+                id: 2,
+                name: "Levothyroxine",
+                dosage: "100mcg",
+                status: "Due in 4 hours",
+            },
+            {
+                id: 3,
+                name: "Atorvastatin",
+                dosage: "20mg",
+                status: "Due Tonight",
             },
         ],
         friendList: [],

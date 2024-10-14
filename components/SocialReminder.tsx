@@ -26,7 +26,7 @@ export const SocialReminder : FC<SocialReminderProps> = ({ avatar, streak, style
         {/* <Image source={bellIconDisplay} style={styles_social.BellIcon} /> */}
         <Image source={avatarIconDisplay} style={styles_home.AvatarIcon} />
 
-        <View style={styles_home.Status}>
+        <View style={styles_home.StatusFren}>
           <Image source={fireIconDisplay} style={styles_home.FireIcon} />
           <Text style={styles_home.Streak}>{streak}</Text>
         </View>

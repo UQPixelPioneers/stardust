@@ -1,10 +1,13 @@
-import {FlatList, Image, Text, TouchableOpacity, View} from "react-native";
+import {FlatList, Image, ImageBackground, SafeAreaView, ScrollView, Text, TouchableOpacity, View} from "react-native";
 import { Login } from "./Login";
 import { Footer } from "@/components/Footer";
 import styles from '@/styles/GlobalSheet';
 import styles_social from "@/styles/SocialSheet";
 import React from "react";
 import styles_home from "@/styles/HomeSheet";
+import { SafeAreaProvider } from "react-native-safe-area-context";
+import { AddButton } from "@/components/AddButton";
+import { BackButton } from "@/components/BackButton";
 
 const avatarIcon = "../assets/images/avatarIcon.png";
 const bellIcon = "../assets/images/notification_bell.png";
@@ -58,17 +61,31 @@ export const Social = () =>  {
     );
 
     return (
-        <View>
-            <View>
-                <Image source={require(avatarIcon)} style={styles_social.UserIcon} />
-                <Text style={styles_social.StatusText}>Set your status:</Text>
-            </View>
-            <Text style={styles_social.CircleTitle}>Your Circle</Text>
-            <FlatList
-                data={friendsData}
-                keyExtractor={(item) => item.id}
-                renderItem={renderItem}
-            />
-        </View>
+        <ImageBackground source={require("@/assets/backgrounds/homeBackground.png")} style={styles.Background}>
+             <SafeAreaProvider>
+                <SafeAreaView  style={styles.Page}>
+                        <View style={styles.TopContainer}>
+                            <BackButton></BackButton>
+                            <AddButton></AddButton>
+                        </View>
+                        <View style={[styles.TopContainer, styles_social.SocialTop]}>
+                            <Image source={require(avatarIcon)} style={styles_social.UserIcon} />
+                            <Text style={styles_social.StatusText}>Set your status:</Text>
+                        </View>
+
+                        <Text style={styles_social.CircleTitle}>Your Circle</Text>
+                        <FlatList
+                            data={friendsData}
+                            keyExtractor={(item) => item.id}
+                            renderItem={renderItem}
+                        />
+
+                </SafeAreaView>
+
+             </SafeAreaProvider>
+
+        </ImageBackground>
+       
+
   );
 }

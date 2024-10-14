@@ -15,36 +15,77 @@ import { Platform } from 'react-native';
 const Stack = createNativeStackNavigator();
 
 // Wrapper component
-const SetupPage = (Component: React.FC, screenTitle: string) => {
+const SetupPage = (Component: React.FC, screenTitle: string, useFooter: boolean) => {
     return (props: any) => {
         React.useEffect(() => {
             if (Platform.OS === 'web') {
                 document.title = `Stardust | ${screenTitle}`;
             }
         }, []);
-
-        return (
+        if (useFooter == true){
+            return (
             <>
                 <Component {...props} />
                 <Footer />
             </>
-        );
+            );
+        }else{
+            return (
+                <>
+                    <Component {...props} />
+
+                </>
+            );
+        }
+
     };
 };
 
 export default function Index() {
-    const landingRoute = "Startup";
+    const landingRoute = "Home";
 
     return (
         <Stack.Navigator initialRouteName={landingRoute}>
-            <Stack.Screen name="Startup" component={SetupPage(Startup, "Getting Started")} />
-            <Stack.Screen name="Home" component={SetupPage(Home, "Home")} />
-            <Stack.Screen name="Login" component={SetupPage(Login, "Login")} />
-            <Stack.Screen name="Management" component={SetupPage(Management, "Management")} />
-            <Stack.Screen name="Medication" component={SetupPage(Medication, "Medication")} />
-            <Stack.Screen name="Appointment" component={SetupPage(Appointment, "Appointment")} />
-            <Stack.Screen name="Social" component={SetupPage(Social, "Social")} />
-            <Stack.Screen name="Setting" component={SetupPage(Setting, "Settings")} />
+            <Stack.Screen 
+                name="Startup" 
+                component={SetupPage(Startup, "Getting Started", false)} 
+                options={{ headerShown: false }} 
+            />
+            <Stack.Screen 
+                name="Home" 
+                component={SetupPage(Home, "Home", true)} 
+                options={{ headerShown: false }} 
+            />
+            <Stack.Screen 
+                name="Login" 
+                component={SetupPage(Login, "Login", false)} 
+                options={{ headerShown: false }} 
+            />
+            <Stack.Screen 
+                name="Management" 
+                component={SetupPage(Management, "Management", true)} 
+                options={{ headerShown: false }} 
+            />
+            <Stack.Screen 
+                name="Medication" 
+                component={SetupPage(Medication, "Medication", true)} 
+                options={{ headerShown: false }} 
+            />
+            <Stack.Screen 
+                name="Appointment" 
+                component={SetupPage(Appointment, "Appointment", true)} 
+                options={{ headerShown: false }} 
+            />
+            <Stack.Screen 
+                name="Social" 
+                component={SetupPage(Social, "Social", true)} 
+                options={{ headerShown: false }} 
+            />
+            <Stack.Screen 
+                name="Setting" 
+                component={SetupPage(Setting, "Settings", true)} 
+                options={{ headerShown: false }} 
+            />
         </Stack.Navigator>
     );
 }

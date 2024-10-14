@@ -55,7 +55,7 @@ export const Home = () => {
             <SafeAreaProvider>
             <SafeAreaView  style={styles.Page}>
             <ScrollView style ={styles.Scrollable} >
-                <View style={styles_home.DateBellContainer}>
+                <View style={styles.TopContainer}>
                     <IntervalUpdater interval={1000} children={<FormattedDate/>}/>
                     <Pressable>
                         <Image source={require(BellImage)} style={styles_home.BellIcon}/>

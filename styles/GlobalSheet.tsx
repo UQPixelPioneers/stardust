@@ -38,8 +38,9 @@ let styles = StyleSheet.create({
     tintColor: "brown",
   },
   AddButton:{
-    width: 30,
-    height: 30,
+    aspectRatio: 1,
+    width: 45,
+    height: undefined,
   },
   backgroundImage: {
     flex: 1,
@@ -55,6 +56,13 @@ let styles = StyleSheet.create({
   listContainer:{
 
   },
+  TopContainer:{
+    flexGrow: 1,
+    flexDirection: "row",
+    justifyContent: "space-between",
+    paddingRight: 20,
+    paddingLeft: 5,
+},
 
 });
 

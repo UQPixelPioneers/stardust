@@ -4,7 +4,7 @@ let styles_footer = StyleSheet.create({
     IconActive: {
         flexGrow: 1, // This box will grow to fill twice as much space as the others
         flexShrink: 1, // This box will shrink if necessary
-        flexBasis: 50, // Starts at 100px width
+        flexBasis: 35, // Starts at 100px width
         aspectRatio: 1,
         height: undefined,
         padding: 30,
@@ -13,7 +13,7 @@ let styles_footer = StyleSheet.create({
     IconInactive: {
         flexGrow: 1, // This box will grow to fill twice as much space as the others
         flexShrink: 1, // This box will shrink if necessary
-        flexBasis: 50, // Starts at 100px width
+        flexBasis: 35, // Starts at 100px width
         aspectRatio: 1,
         height: undefined,
         tintColor: "#CFACC5",

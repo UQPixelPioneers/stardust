@@ -6,6 +6,8 @@ import styles_login from '@/styles/LoginSheet';
 import { useNavigation } from '@react-navigation/native';
 import {BounceableImage} from "@/components/BounceableImage";
 import styles_home from "@/styles/HomeSheet";
+import {login} from "@/interfaces/account";
+import {useUserContext} from "@/interfaces/userprovider";
 
 const BgImage = '../assets/backgrounds/mainBackground.png';
 const LogoImage = '../assets/images/stardustLogo.png'
@@ -14,6 +16,7 @@ export const Login = () => {
     const navigation = useNavigation<any>();
 
     const [errorMessage, onErrorMessageUpdate] = React.useState('');
+    const { setUser } = useUserContext();
 
     const onPressFunction = ({username, password}: { username: string, password: string }) => {
         if (!username || !password) {
@@ -22,6 +25,12 @@ export const Login = () => {
             return;
         }
         // Successful Login (Additional verification would be done above.
+        const user = login(username, password);
+        if (user == null) {
+            onErrorMessageUpdate("Error! Cannot find user!");
+        } else {
+            setUser(user);
+        }
         navigation.navigate("Home", {screen: "Home"});
     }
 

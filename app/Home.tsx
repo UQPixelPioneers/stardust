@@ -1,6 +1,5 @@
 import * as React from 'react';
 import { Text, View, ScrollView, Pressable, Image, ImageBackground, } from "react-native";
-import { Footer } from "@/components/Footer";
 import styles from '@/styles/GlobalSheet';
 import styles_home from "@/styles/HomeSheet";
 import {FormattedDate} from "@/components/FormattedDate";
@@ -20,33 +19,38 @@ const LogoImage = '../assets/images/stardustLogoColor.png'
 import { StyleSheet } from 'react-native';
 import {MedicationReminder} from "@/components/MedicationReminder";
 import {SocialReminder} from "@/components/SocialReminder";
+import {useUserContext} from "@/interfaces/userprovider";
 
 
 export const Home = () => {
 
-    const [user, onUsernameUpdate] = React.useState('');
+    const [username, onUsernameUpdate] = React.useState('');
     const [fontsLoaded] = useFonts({
         "ArialBold": require("../assets/fonts/Arial_Rounded_Bold.ttf"),
-
       });
-
+    const { user } = useUserContext();
 
     // Loads current user. Should ideally load from account
     React.useEffect(() => {
-        onUsernameUpdate("Yuki");
+        onUsernameUpdate(user?.name ?? "");
     }, []); // Empty dependency only runs on load
 
-    const medReminders = Array.from({ length: 7 }, (_, index) => (
+    const medReminders = user?.medicationList.map((medication, index) => (
         <MedicationReminder
-            key={index + 1} // Use index + 1 for keys
-            name={"Placeholder"}
-            status={true}
-            style={styles_home.MedsBubble}
+            key={index} // Using index as a key (ideally use a unique ID if available)
+            name={medication.name} // Populating with medication name
+            status={medication.status === "Taken"} // Assuming 'status' is a string, and checking if it's "Taken"
+            style={styles_home.MedsBubble} // The style for each bubble
         />
     ));
 
-    const socialReminders = Array.from({ length: 7 }, (_, index) => (
-        <SocialReminder key={index + 1} streak={9} style={styles_home.SocialBubble}/>
+    const socialReminders = user?.friendList.map((friendEntry, index) => (
+        <SocialReminder
+            key={index} // Use index or friend's unique ID for the key
+            avatar={friendEntry.user.avatar}
+            streak={friendEntry.streak} // Pass the streak value for each friend
+            style={styles_home.SocialBubble} // Style for each social reminder
+        />
     ));
 
     return (
@@ -63,7 +67,7 @@ export const Home = () => {
                 </View>
 
                 <BounceableImage source={require(LogoImage)} max_scale={1.2} duration={275} style={styles_home.Logo}/>
-                <Text style={styles.Heading}>Welcome back, {user}!</Text>
+                <Text style={styles.Heading}>Welcome back, {username}!</Text>
                 <IntervalUpdater interval={500} children={<BottleFinder/>}/>
                 <Text style={styles.Heading2}>Your Medication today!</Text>
                 <HorizontalScrollable

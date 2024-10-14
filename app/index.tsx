@@ -11,6 +11,7 @@ import { Medication } from '@/components/Medication';
 import { Appointment } from '@/components/Appointment';
 import {Footer} from "@/components/Footer";
 import { Platform } from 'react-native';
+import {UserProvider} from "@/interfaces/userprovider";
 
 const Stack = createNativeStackNavigator();
 
@@ -36,16 +37,18 @@ export default function Index() {
     const landingRoute = "Startup";
 
     return (
-        <Stack.Navigator initialRouteName={landingRoute}>
-            <Stack.Screen name="Startup" component={SetupPage(Startup, "Getting Started")} />
-            <Stack.Screen name="Home" component={SetupPage(Home, "Home")} />
-            <Stack.Screen name="Login" component={SetupPage(Login, "Login")} />
-            <Stack.Screen name="Management" component={SetupPage(Management, "Management")} />
-            <Stack.Screen name="Medication" component={SetupPage(Medication, "Medication")} />
-            <Stack.Screen name="Appointment" component={SetupPage(Appointment, "Appointment")} />
-            <Stack.Screen name="Social" component={SetupPage(Social, "Social")} />
-            <Stack.Screen name="Setting" component={SetupPage(Setting, "Settings")} />
-        </Stack.Navigator>
+        <UserProvider>
+            <Stack.Navigator initialRouteName={landingRoute}>
+                <Stack.Screen name="Startup" component={SetupPage(Startup, "Getting Started")} />
+                <Stack.Screen name="Home" component={SetupPage(Home, "Home")} />
+                <Stack.Screen name="Login" component={SetupPage(Login, "Login")} />
+                <Stack.Screen name="Management" component={SetupPage(Management, "Management")} />
+                <Stack.Screen name="Medication" component={SetupPage(Medication, "Medication")} />
+                <Stack.Screen name="Appointment" component={SetupPage(Appointment, "Appointment")} />
+                <Stack.Screen name="Social" component={SetupPage(Social, "Social")} />
+                <Stack.Screen name="Setting" component={SetupPage(Setting, "Settings")} />
+            </Stack.Navigator>
+        </UserProvider>
     );
 }
 

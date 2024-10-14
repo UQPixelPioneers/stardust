@@ -1,4 +1,6 @@
 ﻿// Doctors
+import {Doctor, User} from "@/interfaces/database";
+
 const doctors: Doctor[] = [
     {
         id: 1,

@@ -20,6 +20,7 @@ import { StyleSheet } from 'react-native';
 import {MedicationReminder} from "@/components/MedicationReminder";
 import {SocialReminder} from "@/components/SocialReminder";
 import {useUserContext} from "@/interfaces/userprovider";
+import {FriendEntry, MedicationEntry} from "@/interfaces/database";
 
 
 export const Home = () => {
@@ -35,7 +36,7 @@ export const Home = () => {
         onUsernameUpdate(user?.name ?? "");
     }, []); // Empty dependency only runs on load
 
-    const medReminders = user?.medicationList.map((medication, index) => (
+    const medReminders = user?.medicationList.map((medication : MedicationEntry, index :number) => (
         <MedicationReminder
             key={index} // Using index as a key (ideally use a unique ID if available)
             name={medication.name} // Populating with medication name
@@ -44,7 +45,7 @@ export const Home = () => {
         />
     ));
 
-    const socialReminders = user?.friendList.map((friendEntry, index) => (
+    const socialReminders = user?.friendList.map((friendEntry : FriendEntry, index : number) => (
         <SocialReminder
             key={index} // Use index or friend's unique ID for the key
             avatar={friendEntry.user.avatar}
@@ -59,7 +60,7 @@ export const Home = () => {
             <SafeAreaProvider>
             <SafeAreaView  style={styles.Page}>
             <ScrollView style ={styles.Scrollable} >
-                <View style={styles_home.DateBellContainer}>
+                <View style={styles.TopContainer}>
                     <IntervalUpdater interval={1000} children={<FormattedDate/>}/>
                     <Pressable>
                         <Image source={require(BellImage)} style={styles_home.BellIcon}/>

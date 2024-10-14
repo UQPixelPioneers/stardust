@@ -41,6 +41,24 @@ let styles_medication = StyleSheet.create({
     EntryDosage: {
 
     },
+    MedicationHeading:{
+        marginLeft: 10,
+        color: "white",
+    },
+    MedicationText:{
+        color: "white",
+    },
+    MedicationCheckIcon: {
+        aspectRatio: 1,
+        height: undefined,
+        // flex: 1,
+        width: 30,
+    },
+    TakenMeds:{
+        flexDirection: 'row',
+        alignItems: 'center',
+        margin: 15,
+    }
 });
 
 export default styles_medication;

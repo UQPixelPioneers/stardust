@@ -36,4 +36,4 @@ type User = {
     medicationList: MedicationEntry[];
     friendList: FriendEntry[];
 };
-
+export {User, AppointmentEntry, MedicationEntry, Doctor, FriendEntry};

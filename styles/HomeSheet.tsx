@@ -41,7 +41,7 @@ let styles_home = StyleSheet.create({
         height: undefined,
         flex: 1,
     },
-    Status: {
+    StatusMeds: {
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'space-between',
@@ -117,7 +117,7 @@ let styles_home = StyleSheet.create({
         paddingRight: 20,
         paddingLeft: 5,
     },
-    Status: {
+    StatusFren: {
         flexDirection: 'row',
         alignItems: "center",
         zIndex: 1,

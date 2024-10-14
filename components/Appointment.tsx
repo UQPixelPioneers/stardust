@@ -3,8 +3,10 @@ import {Text, View, ImageBackground, FlatList, Image, Switch, TouchableOpacity} 
 import { BackButton } from "./BackButton";
 import { AddButton } from "./AddButton";
 import styles_appointment from "@/styles/AppointmentSheet";
+import styles from "@/styles/GlobalSheet";
 
 const avatarIcon = "../assets/images/avatarIcon.png";
+const bgImage = '../assets/backgrounds/mainBackground.png';
 
 export const Appointment = () =>  {
     const [isUpcoming, setIsUpcoming] = React.useState(true);
@@ -52,7 +54,10 @@ export const Appointment = () =>  {
 
     return (
     <View>
-      <ImageBackground>
+        <ImageBackground
+            //source={require(bgImage)}
+            //style={styles.backgroundImage}
+            >
         <BackButton></BackButton>
         <AddButton></AddButton>
 
@@ -85,7 +90,7 @@ export const Appointment = () =>  {
                       {item.date}, {item.time}
                   </Text>
                   <View style={styles_appointment.DoctorInfo}>
-                      <Image source={item.DoctorAvatar} style={styles_appointment.DoctorAvatar}/>
+                      <Image source={item.doctorAvatar} style={styles_appointment.DoctorAvatar}/>
                       <View>
                           <Text style={styles_appointment.DoctorName}>{item.doctorName}</Text>
                           <Text style={styles_appointment.SpecialistRole}>{item.specialistRole}</Text>

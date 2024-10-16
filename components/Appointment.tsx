@@ -4,52 +4,22 @@ import { BackButton } from "./BackButton";
 import { AddButton } from "./AddButton";
 import styles_appointment from "@/styles/AppointmentSheet";
 import styles from "@/styles/GlobalSheet";
+import {useUserContext} from "@/interfaces/userprovider";
+import {AppointmentEntry} from "@/interfaces/database";
 
 const avatarIcon = "../assets/images/avatarIcon.png";
 const bgImage = '../assets/backgrounds/mainBackground.png';
 
 export const Appointment = () =>  {
     const [isUpcoming, setIsUpcoming] = React.useState(true);
+    const { user } = useUserContext();
 
-    const appointments : any[] = [];
+    // Change appointments to an array type
+    const appointments: AppointmentEntry[] = user?.appointmentList || []; // Make sure this is an array
 
-    appointments.push(
-        {
-            id: "1",
-            date: "2024-10-9",
-            time: "8:30 AM",
-            doctorAvatar: require(avatarIcon),
-            doctorName: "Dr. Elizabeth Choo",
-            specialistRole: "Neurosurgeon",
-        },
-        {
-            id: "2",
-            date: "2024-10-11",
-            time: "8:30 AM",
-            doctorAvatar: require(avatarIcon),
-            doctorName: "Dr. Elizabeth Choo",
-            specialistRole: "Neurosurgeon",
-        },
-        {
-            id: "3",
-            date: "2024-10-13",
-            time: "8:30 AM",
-            doctorAvatar: require(avatarIcon),
-            doctorName: "Dr. Elizabeth Choo",
-            specialistRole: "Neurosurgeon",
-        },
-        {
-            id: "4",
-            date: "2024-10-15",
-            time: "8:30 AM",
-            doctorAvatar: require(avatarIcon),
-            doctorName: "Dr. Elizabeth Choo",
-            specialistRole: "Neurosurgeon",
-        },
-    )
-
+    // Correct filtering of appointments based on date
     const appointmentFilter = isUpcoming
-        ? appointments.filter((appointment) => new Date(appointment.date) >= new Date())
+        ? appointments.filter((appointment) => new Date(appointment.date) >= new Date()) // Compare with appointment.date
         : appointments.filter((appointment) => new Date(appointment.date) < new Date());
 
     return (
@@ -83,17 +53,17 @@ export const Appointment = () =>  {
 
       <FlatList
           data={appointmentFilter}
-          keyExtractor={(item) => item.id}
+          keyExtractor={(item) => item.id.toString()}
           renderItem={({ item }) => (
               <View style={styles_appointment.AppointmentCard}>
                   <Text style={styles_appointment.AppointmentText}>
                       {item.date}, {item.time}
                   </Text>
                   <View style={styles_appointment.DoctorInfo}>
-                      <Image source={item.doctorAvatar} style={styles_appointment.DoctorAvatar}/>
+                      <Image source={item.doctor.avatar} style={styles_appointment.DoctorAvatar}/>
                       <View>
-                          <Text style={styles_appointment.DoctorName}>{item.doctorName}</Text>
-                          <Text style={styles_appointment.SpecialistRole}>{item.specialistRole}</Text>
+                          <Text style={styles_appointment.DoctorName}>{item.doctor.name}</Text>
+                          <Text style={styles_appointment.SpecialistRole}>{item.doctor.specialistRole}</Text>
                       </View>
                   </View>
               </View>

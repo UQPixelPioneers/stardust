@@ -1,40 +1,29 @@
-import {Text, View, Pressable, ImageBackground, Image, FlatList, ScrollView} from "react-native";
+import { Text, View, ImageBackground, Image, FlatList } from "react-native";
 
-import { Footer } from "@/components/Footer";
 import { BackButton } from "./BackButton";
-import { MedicationEntry } from "./MedicationEntry";
+import { MedicationBubble } from "./MedicationBubble";
 import { AddButton } from "./AddButton";
-import {MedicationReminder} from "@/components/MedicationReminder";
 
 import * as React from "react";
-import {Key} from "react";
 import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
 
 import styles from '@/styles/GlobalSheet';
 import styles_medication from "@/styles/MedicationSheet";
-import styles_home from "@/styles/HomeSheet";
-
-
-
+import {useUserContext} from "@/interfaces/userprovider";
+import { MedicationEntry } from "@/interfaces/database";
 
 export const Medication = () =>  {
 
-    // Sample data for medications
-    const medEntries = Array.from({ length: 7 }, (_, index) => ({
-        id: String(index + 1), // Unique id for each entry
-        name: "Medication " + (index + 1) + " ", // Example medication name
-        dosage: 10,
-        amount: 2,
-        frequency: "Daily",
-    }));
 
-    const renderItem = ({ item }: { item: { id: string; name: string; dosage: number; amount: number; frequency: string; } }) => (
-        <MedicationEntry
-            key={item.id}
+    const { user } = useUserContext();
+
+    const renderItem = ({ item }: { item: MedicationEntry }) => (
+        <MedicationBubble
+            key={item.id} // Assuming 'id' is unique and present in MedicationEntry
             name={item.name}
             dosage={item.dosage}
             amount={item.amount}
-            frequency={item.frequency}
+            frequency={item.frequency || "Daily"} // Default to "Daily" if frequency is not defined
         />
     );
 
@@ -54,20 +43,14 @@ export const Medication = () =>  {
               </Image>
               <Text style={styles_medication.MedicationText}>You have taken your medication</Text>
             </View>
-
-
                 <FlatList
                     style= {styles_medication.PillList}
-                    data={medEntries} // Use medEntries as the data source
+                    data={user.medicationList} // Use medEntries as the data source
                     renderItem={renderItem}
-                    keyExtractor={(item) => item.id}
+                    keyExtractor={(item) => item.id.toString()}
                     numColumns={2} // Adjust as needed
                     contentContainerStyle={styles.listContainer} // Optional styling
                 />
-
-
-
-
           </SafeAreaView>
       </SafeAreaProvider>
     </ImageBackground>

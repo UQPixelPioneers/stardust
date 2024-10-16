@@ -63,6 +63,7 @@ let styles = StyleSheet.create({
     paddingRight: 20,
     paddingLeft: 5,
 },
+  Date: {}
 
 });
 

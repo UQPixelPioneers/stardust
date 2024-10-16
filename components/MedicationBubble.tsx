@@ -15,21 +15,21 @@ interface MedicationEntryProps {
 function numToWords(num: number): string {
     switch (num) {
         case 0:
-            return "zero";
+            return "Zero";
         case 1:
-            return "once";
+            return "Once";
         case 2:
-            return "twice";
+            return "Twice";
         case 3:
-            return "thrice";
+            return "Thrice";
         default:
-            return `${num} times`;
+            return `${num} Times`;
     }
 }
 
 const pillIcon = "../assets/images/pillIcon.png";
 
-export const MedicationEntry : FC<MedicationEntryProps> = ({ name, dosage, amount, frequency }) => {
+export const MedicationBubble : FC<MedicationEntryProps> = ({ name, dosage, amount, frequency }) => {
     const pillIconDisplay = require(pillIcon);
     const dosageInformation = `${dosage}mg • ${numToWords(amount)} ${frequency}`;
 

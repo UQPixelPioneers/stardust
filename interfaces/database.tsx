@@ -22,7 +22,9 @@ type AppointmentEntry = {
 type MedicationEntry = {
     id: number;
     name: string;
-    dosage: string;
+    dosage: number;
+    amount: number;
+    frequency: string;
     status: string;
 };
 

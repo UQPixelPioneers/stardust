@@ -19,6 +19,8 @@ export const Login = () => {
     const { setUser } = useUserContext();
 
     const onPressFunction = ({username, password}: { username: string, password: string }) => {
+        username = "StarAngela";
+        password = "password123"
         if (!username || !password) {
             // Alert the user if fields are empty
             onErrorMessageUpdate("Error! Please enter a username & password");

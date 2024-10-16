@@ -5,7 +5,7 @@ let styles_appointment = StyleSheet.create({
     AppointmentText: {},
     AppointmentCard: {},
     DoctorInfo: {},
-    DoctorAvatar: {},
+    DoctorAvatar: { width: 50, height: 50},
     DoctorName: {},
     SpecialistRole: {},
     ToggleButton: {},

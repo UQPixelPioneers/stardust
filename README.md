@@ -3,6 +3,9 @@
 ## Project Overview
 This project seeks to create a supportive solution that promote medication adherence for individuals with ADHD, with a design that acknowledges their unique challenges.
 
+## Wiki
+Our design and code documentation can be found at: https://github.com/UQPixelPioneers/stardust/wiki
+
 ## Features
 The Stardust Solution ✨ encapsulates the Stardust Mobile App📱 with the Stardust Pill Water Bottle🍼.
 **Hardware - Stardust Water Bottle**
@@ -41,6 +44,7 @@ The Stardust Solution ✨ encapsulates the Stardust Mobile App📱 with the Star
 ### Prerequisites
 - Node.js (version 18.x or higher recommended)
   - NPM (version 9.x or higher)
+- Mobile dev enviroment for iOS or Andriod (Xcode vs Andriod SDK)
 
 ### Installation
 

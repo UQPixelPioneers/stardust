@@ -15,8 +15,6 @@ import { useFonts } from "expo-font";
 const BellImage = '../assets/images/notification_bell.png'
 const LogoImage = '../assets/images/stardustLogoColor.png'
 
-
-import { StyleSheet } from 'react-native';
 import {MedicationReminder} from "@/components/MedicationReminder";
 import {SocialReminder} from "@/components/SocialReminder";
 import {useUserContext} from "@/interfaces/userprovider";

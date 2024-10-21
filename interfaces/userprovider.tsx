@@ -1,4 +1,5 @@
 ﻿import React, { createContext, useState, useContext, ReactNode } from 'react';
+import {User} from "@/interfaces/database";
 
 type UserContextType = {
     user: User | null;

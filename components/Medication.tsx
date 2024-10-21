@@ -14,7 +14,6 @@ import { MedicationEntry } from "@/interfaces/database";
 
 export const Medication = () =>  {
 
-
     const { user } = useUserContext();
 
     const renderItem = ({ item }: { item: MedicationEntry }) => (
@@ -35,7 +34,7 @@ export const Medication = () =>  {
             <BackButton></BackButton>
             <AddButton></AddButton>
             </View>
-            
+
             <Text style={[styles.Heading, styles_medication.MedicationHeading]}>Medication</Text>
 
             <View style={styles_medication.TakenMeds}>
@@ -43,14 +42,16 @@ export const Medication = () =>  {
               </Image>
               <Text style={styles_medication.MedicationText}>You have taken your medication</Text>
             </View>
-                <FlatList
-                    style= {styles_medication.PillList}
-                    data={user.medicationList} // Use medEntries as the data source
-                    renderItem={renderItem}
-                    keyExtractor={(item) => item.id.toString()}
-                    numColumns={2} // Adjust as needed
-                    contentContainerStyle={styles.listContainer} // Optional styling
-                />
+              {user && (
+                  <FlatList
+                      style= {styles_medication.PillList}
+                      data={user.medicationList} // Use medEntries as the data source
+                      renderItem={renderItem}
+                      keyExtractor={(item) => item.id.toString()}
+                      numColumns={2} // Adjust as needed
+                      contentContainerStyle={styles.listContainer} // Optional styling
+                  />
+              )}
           </SafeAreaView>
       </SafeAreaProvider>
     </ImageBackground>

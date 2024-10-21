@@ -6,11 +6,13 @@ import styles_login from '@/styles/LoginSheet';
 import { useNavigation } from '@react-navigation/native';
 import {BounceableImage} from "@/components/BounceableImage";
 import styles_home from "@/styles/HomeSheet";
-import {login} from "@/interfaces/account";
+
 import {useUserContext} from "@/interfaces/userprovider";
 
 const BgImage = '../assets/backgrounds/mainBackground.png';
 const LogoImage = '../assets/images/stardustLogo.png'
+
+import {login} from "@/interfaces/account";
 
 export const Login = () => {
     const navigation = useNavigation<any>();
@@ -19,8 +21,6 @@ export const Login = () => {
     const { setUser } = useUserContext();
 
     const onPressFunction = ({username, password}: { username: string, password: string }) => {
-        username = "StarAngela";
-        password = "password123"
         if (!username || !password) {
             // Alert the user if fields are empty
             onErrorMessageUpdate("Error! Please enter a username & password");

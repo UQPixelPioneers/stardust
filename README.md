@@ -5,6 +5,7 @@ This project seeks to create a supportive solution that promote medication adher
 
 ## Features
 The Stardust Solution ✨ encapsulates the Stardust Mobile App📱 with the Stardust Pill Water Bottle🍼.
+
 **Hardware - Stardust Water Bottle**
 - Portable and light design
 - Water storage
@@ -22,11 +23,11 @@ The Stardust Solution ✨ encapsulates the Stardust Mobile App📱 with the Star
 - Appointment Notes and Scheduling
 
 ## Mobile and Mobile Aspects
-**- Context-Diverse** Operates within changing environments and situations. Can be used wherever you are.
-**- Collaboration:** Allows users to work together to achieve better medication adherence outcomes
-**- Activity Traces:** View and record your own and other people's activity asynchronously (distributed asynchronous activity)
-**- Location Aware:** Although the solution can be used anywhere, the system retains location awareness in order to make sure a user doesn't lose or forget their waterbottle.
-**- Location Diverse:** Portable form means you can store and use the technology anywhere. Whether you have your usual routine or are travelling.
+- **Context-Diverse** Operates within changing environments and situations. Can be used wherever you are.
+- **Collaboration:** Allows users to work together to achieve better medication adherence outcomes
+- **Activity Traces:** View and record your own and other people's activity asynchronously (distributed asynchronous activity)
+- **Location Aware:** Although the solution can be used anywhere, the system retains location awareness in order to make sure a user doesn't lose or forget their waterbottle.
+- **Location Diverse:** Portable form means you can store and use the technology anywhere. Whether you have your usual routine or are travelling.
 
 ## Technologies Used
 - **Frontend**: React Native, TypeScript, Expo
